@@ -59,3 +59,7 @@ body {
   display: table;
   clear: both;
 }
+
+.section:not(.active-panel) {
+  cursor: pointer;
+}
