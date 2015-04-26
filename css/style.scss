@@ -1,0 +1,58 @@
+@mixin fullpage {
+    height: 100%;   
+    width: 100%;
+}
+@mixin bgimage {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+html {
+    @include fullpage;
+}
+body {
+    @include fullpage;
+    position: fixed;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+}
+.wrapper {
+    @include fullpage;
+    position: fixed;
+}
+.section {
+    float: left;
+    height: 100%;
+    clear: none;
+}
+.content {
+    padding: 10px;
+}
+.active-panel {
+    width: 80%;
+}
+.panel {
+    width: 10%;
+}
+.channel {
+    @include bgimage;
+    background-color: #6F7B94;
+    background-image: url(../img/ayumi.png);
+}
+.blog {
+    @include bgimage;
+    background-color: #946F8D;
+    background-image: url(../img/golden.jpg);
+}
+.social {
+    @include bgimage;
+    background-color: #936E6E;
+    background-image: url(../img/kicks.jpeg);
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
